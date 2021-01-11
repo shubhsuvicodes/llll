@@ -24,7 +24,7 @@
             showNotification();
         } else if (Notification.permission !== "denied") {
             Notification.requestPermission().then(permission=>{
-                if (permition === "granted"){
+                if (permission === "granted"){
                     showNotification();
                 }
                 console.log(permission);
