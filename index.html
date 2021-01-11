@@ -18,10 +18,10 @@
         function message(){
     //Messaging
 
-    const inTheBodyAsker = prompt('What do you want the message to be?', "Hi");
+    var cp = prompt("What do you want the message to be?");
                 function showNotification(){
                     const notification = new Notification("This is your message:" );
-                    body: "This is your message" + inTheBodyAsker
+                    body: "This is your message" + cp
                 };
 
             console.log(Notification.permission);
