@@ -19,10 +19,10 @@
                     body:"hi"
                 }
 
-        console-log(Notification.permission);
-        if(Notification.permission === "granted"){
+        console.log(Notification.permission);
+        if (Notification.permission === "granted") {
             showNotification();
-        }else if (Notification.permission !== "denied"){
+        } else if (Notification.permission !== "denied") {
             Notification.requestPermission().then(permission=>{
                 if (permition === "granted"){
                     showNotification();
