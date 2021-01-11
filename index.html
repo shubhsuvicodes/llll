@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
+    <Button id="Project">Hi Click to send a message</Button>
+    <h1>Hi guys welcome back to my channel look bellow </h1>
     <style>
         *{
             padding: 0%;
@@ -13,13 +15,16 @@
 </head>
 <body>
     <script>
+        function message(){
     //Messaging
-                function showNotification(){
-                    const notification = new Notification("New message from Me");
-                    body:"hi"
-                }
 
-        console.log(Notification.permission);
+    const inTheBodyAsker = prompt('What do you want the message to be?', "Hi");
+                function showNotification(){
+                    const notification = new Notification("This is your message:" );
+                    body: "This is your message" + inTheBodyAsker
+                };
+
+            console.log(Notification.permission);
         if (Notification.permission === "granted") {
             showNotification();
         } else if (Notification.permission !== "denied") {
@@ -31,6 +36,12 @@
                 showNotification();
             });
         }
+
+    }
+       
+                
+    document.getElementById('Project').addEventListener("click", message )
+                
     </script>
 </body>
 </html>
